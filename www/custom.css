@@ -1,0 +1,236 @@
+/* =========================================
+GLOBAL
+========================================= */
+
+body {
+  font-family: Segoe UI;
+}
+
+/* =========================================
+CENTER NAVBAR TITLE
+========================================= */
+
+.navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================================
+USER PANEL
+========================================= */
+
+.user-panel {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.short-user {
+  display: none;
+}
+
+.sidebar-collapse .full-user {
+  display: none;
+}
+
+.sidebar-collapse .short-user {
+  display: inline;
+}
+
+/* =========================================
+METRIC GRID
+========================================= */
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* kill bootstrap interference */
+.metric-grid > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  flex: unset !important;
+}
+
+/* =========================================
+CARDS
+========================================= */
+
+.small-box {
+  width: 100% !important;
+  height: 120px;
+  min-height: 120px;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-box .inner {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.small-box h3 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.small-box-subtitle {
+  font-size: 12px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.small-box .icon {
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+}
+
+.small-box-footer {
+  height: 30px;
+}
+
+/* =========================================
+DATATABLE (FIXED COMPACT STYLE)
+========================================= */
+
+table.dataTable {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+table.dataTable tbody tr {
+  height: auto !important;
+  line-height: 1.2 !important;
+}
+
+table.dataTable tbody td {
+  padding: 4px 6px !important;
+  vertical-align: middle !important;
+
+  white-space: nowrap; /* prevents tall rows */
+}
+
+/* selected row */
+table.dataTable tbody tr.selected {
+  background: #2f66ff !important;
+}
+
+/* =========================================
+PLOTLY
+========================================= */
+
+.dark-mode .plotly text {
+  fill: white !important;
+}
+
+/* =========================================
+DARK MODE
+========================================= */
+
+.dark-mode .content-wrapper {
+  background: #101214 !important;
+}
+
+.dark-mode .main-sidebar {
+  background: #181b1f !important;
+}
+
+.dark-mode .card {
+  background: #1d2127 !important;
+  color: white !important;
+}
+
+.dark-mode table {
+  color: white !important;
+}
+
+.dark-mode td,
+.dark-mode th {
+  color: white !important;
+}
+
+.dark-mode .dataTables_wrapper {
+  color: white !important;
+}
+
+/* =========================================
+SCROLLBAR (LIGHT + DARK FIXED)
+========================================= */
+
+/* LIGHT MODE */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* DARK MODE */
+.dark-mode ::-webkit-scrollbar-track {
+  background: #1d2127;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: #4f5b66;
+  border-radius: 10px;
+  border: 2px solid #1d2127;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #6c7a89;
+}
+
+/* ==========================================
+CENTER DASHBOARD TITLE
+========================================== */
+
+.dashboard-navbar-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: white;
+  pointer-events: none;
+}
+
+/* responsive */
+@media (max-width: 1200px) {
+  .dashboard-navbar-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-navbar-title {
+    display: none;
+  }
+}
